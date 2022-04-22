@@ -1,0 +1,21 @@
+body, header, footer { 
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+    text-align: right;
+}
+table{
+    border: 1px solid;
+  }
+title {
+	text-align: center;
+	color:black;
+}
+nav {
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-color: maroon;
+}
+nav a:hover {
+    color: maroon;
+}

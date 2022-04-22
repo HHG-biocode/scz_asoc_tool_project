@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<header>
+<img src = "accessories/logo.rgb.maroon.png" alt = "The University of Chicago Logo" width = 300 height = 150>
+<div style="position: absolute; top: 0; left: 1000px ; width: 250px;"> Duan Lab </br>
+Center for Psychiatric Genetics at Northshore University Health System and the University of Chicago </div>
+<nav class = "Pages" >
+    <ul> 
+        <li class = "Pages"> <a href = 'browser.html'> ASOC Genome Browser </a> </li>
+        <li class = "Pages"> <a href = 'index.html'> Main Page </a></li>
+    </ol>
+</Nav>
+</header>
+<head>
+    <link rel="stylesheet" href = "main.css">
+    <title>  Allele-Specific Open Chromatin & Schizophrenia</title>
+</head>
+<body>
+    <h1> Background</h1>
+      <p> The Allele-Specific Open Chromatin Tool (ASoC-Tool) is an online tool to enable researchers to probe if a given SNP or set of genomic coordinates
+        <br> are located in parts of the genome differentially accessible in schizophrenia (measured by ATAC-seq). Twenty individuals, heterozygous for ~70 SCZ-GWAS 
+        <br> risk alleles, donated cells to the (RUCDR)-NIMH Stem Cell Center, which were then de-differentiated into iPSCs and re-differentiated into several cell types 
+        <br> found in the brain by Professor Jubao Duan and his team at the Center for Psychiatric Genetics at NorthShore University HealthSystem. 
+        <br> Using ATAC-seq, peak sets were generated in iPSCs, Glutamatergic Neurons (GNs), GABAergic Neurons (GAs), Microglia (MG), Dopaminergic Neurons (DNs)
+        <br> and Neural Progenitor Cells (NPCs) (Zhang et al 2020). Below, you can search to see if a given SNP is located within a schizophrenia-associated 
+        <br> allele-specific open chromatin peak within several different cell types. In addition, there is a genome browser tool (based off Dr. Zhong's
+        <br> GIVE system) attached where you can use a Docker-containerized GRCh38 genome-based browser to examine the bigger picture (Cao et al 2018).  
+        
+    </p>
+    <h1> The Tool </h2>
+        <form action = "php_scripts/index.php" method = "get">
+            <label for="Cell_Type_Selection"> Cell Type Selection </label>
+                <input type = "checkbox" value ="DN" name ="cell_type[]" label for = "DN"> DN </label>
+                <input type = "checkbox" value = "MG" name = "cell_type[]" label for = "MG"> Microglia </label>
+                <input type = "checkbox" value = "GA" name = "cell_type[]" label for = "GA"> GABAergic Neurons </label>
+                <input type = "checkbox" value = "GN" name = "cell_type[]" label for = "GN"> Glutamatergic Neurons </label>
+                <input type = "checkbox" value = "NPC" name = "cell_type[]" label for = "NPC"> Neural Progenitor Cell </label>
+                <input type = "checkbox" value = "IPSC" name = "cell_type[]" label for = "IPSC"> Induced Pluripotent Stem Cell </label>
+        <form action = "php_scripts/index.php" method = "get">
+            <label for = "rsid"> Input rsid </label> 
+            <input type = "text" id = "rsid" name = "rsid"> <br> <br>
+            <input type = "submit"> 
+        </form>
+</body>
+
+</html>

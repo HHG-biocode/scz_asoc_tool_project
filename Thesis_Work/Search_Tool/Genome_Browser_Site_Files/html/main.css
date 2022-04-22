@@ -1,0 +1,42 @@
+body, header, footer {
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+    text-align: left;
+}
+title, form, h1 {
+    text-align: center;
+    color: black;
+}
+p.blocktest {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1.0px;
+}
+body, header, footer {
+    background-color: whitesmoke;
+    text-align: left;
+}
+nav {
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-color: maroon;
+} 
+nav a{
+    float: center;
+    display: table-row-group;
+    color: black;
+    text-align: center;
+    padding: 25px 50 25px;
+}
+nav a:hover {
+    color: maroon;
+}
+div{
+    border-style: dashed;
+    border-color: maroon;
+}
+table{
+    border: 1px solid;
+    border-color: blue;
+  }

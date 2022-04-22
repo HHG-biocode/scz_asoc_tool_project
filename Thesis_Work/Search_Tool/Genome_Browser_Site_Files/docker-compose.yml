@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+    hgive:
+        container_name: hgive
+        image: hgardner1/scz_search_tool:latest
+        ports:
+            - "40080:86"
+    php:
+        container_name: php
+        image: php
+        restart: always
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: base
+        ports:
+            - "${PORT}:80"
+        volumes:
+            - ./html:/var/www/html
+        depends_on:
+            - hgive
+    
